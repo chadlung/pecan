@@ -170,7 +170,7 @@ Modify the ``index.html`` like this:
 
 **Note:** Keep in mind when using the `WTForms <http://wtforms.simplecodes.com/>`_ library you can customize the error messages and more. Also, you have multiple validation rules so make sure to catch all the errors which will mean you need a loop rather than the simple example above which grabs the first error item in the list. See the `documentation <http://wtforms.simplecodes.com/>`_ for more information.
 
-Run the application now:
+Run the application:
 
 ::
 
