@@ -47,7 +47,7 @@ With the project ready, go into the templates folder and edit the ``index.html``
             % endif
         </div>
 
-What did we just do?
+**What did we just do?**
 
 #. Modified the contents of the ``form`` tag to have two ``input`` tags. The first is named **message** and the second is named **first_name**
 #. Added a check if ``form_post_data`` has not been defined so we don't show the message or wording
@@ -72,7 +72,7 @@ Modify the ``root.py`` to look like this:
         def index_post(self, **kwargs):
             return dict(form_post_data=kwargs)
 
-What did we just do?
+**What did we just do?**
 
 #. Modified the ``index`` function to render the initial ``index.html`` webpage
 #. Modified the ``index_post`` function to return the posted data via keyword arguments
@@ -125,7 +125,7 @@ Go back to the ``root.py`` files and modify it like this:
             else:
                 return dict(form=form)
 
-What did we just do?
+**What did we just do?**
 
 #. Added the ``PersonalizedMessageForm`` with two textfields and a required field validator for each
 #. Modified the ``index`` function to create a new instance of the ``PersonalizedMessageForm`` class and return it
