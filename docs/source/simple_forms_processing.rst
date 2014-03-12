@@ -44,10 +44,10 @@ With the project ready, go into the templates folder and edit the ``index.html``
 What did we just do?
 
 #. Modified the contents of the ``form`` tag to have two ``input`` tags. The first is named **message** and the second is named **first_name**
-#. Added a check if ``form_post_data`` has not been defined then we don't show the message or wording
+#. Added a check if ``form_post_data`` has not been defined so we don't show the message or wording
 #. Added code to display the message from the user's ``POST`` action
  
-Go into the ``controllers`` folder now and edit the ``root.py`` file. There will be two functions inside of the ``RootController`` class which will display the ``index.html`` file when your web browser hits the ``'\'`` endpoint. If the user puts some data into the textbox and hits the submit button then they will see the personalized message displayed back at them.
+Go into the ``controllers`` folder now and edit the ``root.py`` file. There will be two functions inside of the ``RootController`` class which will display the ``index.html`` file when your web browser hits the ``'/'`` endpoint. If the user puts some data into the textbox and hits the submit button then they will see the personalized message displayed back at them.
 
 Modify the ``root.py`` to look like this:
 
