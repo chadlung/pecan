@@ -3,7 +3,7 @@ Simple Forms Processing with Pecan
 
 This guide will walk you through building a simple Pecan web application that will do some simple forms processing.
 
-First off, you will need to install Pecan:
+First off, you'll need to install Pecan:
 
 ::
 
@@ -93,7 +93,7 @@ Add support for the `WTForms <http://wtforms.simplecodes.com/>`_ library:
 
 $ pip install wtforms
 
-**Note:** Keep in mind that Pecan is not opinionated when it comes to a particular library when working with form generation, validation, etc. Choose which libraries you prefer and integrate those with Pecan. This is one way of doing this, there are many more ways so feel free to handle this however you want.
+**Note:** Keep in mind that Pecan is not opinionated when it comes to a particular library when working with form generation, validation, etc. Choose which libraries you prefer and integrate those with Pecan. This is one way of doing this, there are many more ways so feel free to handle this however you want in your own projects.
 
 Go back to the ``root.py`` files and modify it like this:
 
@@ -131,7 +131,7 @@ What did we just do?
 #. Modified the ``index`` function to create a new instance of the ``PersonalizedMessageForm`` class and return it
 #. In the ``index_post`` function modify it to gather the posted data and validate it. If its valid, then set the returned data to be displayed on the webpage. If not valid, send the form which will contain the data plus the error message(s)
 
-Modify the ``index.hml`` like this:
+Modify the ``index.html`` like this:
 
 ::
 
