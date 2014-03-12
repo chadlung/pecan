@@ -1,7 +1,7 @@
 Simple Forms Processing with Pecan
 ==================================
 
-This guide will walk you through building a simple Pecan web app that will do some simple forms processing.
+This guide will walk you through building a simple Pecan web application that will do some simple forms processing.
 
 Use Pecan's basic template support to start a new project:
 
