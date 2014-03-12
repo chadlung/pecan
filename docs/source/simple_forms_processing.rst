@@ -3,6 +3,12 @@ Simple Forms Processing with Pecan
 
 This guide will walk you through building a simple Pecan web application that will do some simple forms processing.
 
+First off, you will need to install Pecan:
+
+::
+
+$ pip install pecan
+
 Use Pecan's basic template support to start a new project:
 
 ::
@@ -71,7 +77,7 @@ What did we just do?
 #. Modified the ``index`` function to render the initial ``index.html`` webpage
 #. Modified the ``index_post`` function to return the posted data via keyword arguments
 
-Run the application now:
+Run the application:
 
 ::
 
