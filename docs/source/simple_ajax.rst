@@ -22,7 +22,7 @@ Put the new project into development mode:
 
 $ python setup.py develop
 
-For this project will need to add `jQuery <http://jquery.com/>`_ support to this project. To add jQuery support go into the templates folder and edit the ``layout.html`` file. Modify it so that it resembles this:
+For this project will need to add `jQuery <http://jquery.com/>`_ support. To add jQuery go into the templates folder and edit the ``layout.html`` file. Modify it so that it resembles this:
 
 ::
 
