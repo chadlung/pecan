@@ -116,9 +116,9 @@ Let's edit the ``index.html`` file next. We will add the HTML and JavaScript req
 
 **What did we just do?**
 
-#. Added a dropdown control and submit button for the user to interact with. They can pick an open source project and getmore details on it
+#. Added a dropdown control and submit button for the user to interact with. They can pick an open source project and get more details on it
 #. Added JavaScript to make an AJAX call to the server via an HTTP GET passing in the ``id`` of the project we want to fetch more information on
-#. Once the ``onSuccess`` event is triggered by the returning data we take that and display it on the web page below the controls.
+#. Once the ``onSuccess`` event is triggered by the returning data we take that and display it on the web page below the controls
 
 The HTML and JavaScript work is now taken care of. At this point we can add a model to our project inside of the ``model`` folder. Create a file in there called ``projects.py`` and add the following to it:
 
