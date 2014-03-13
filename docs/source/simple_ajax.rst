@@ -58,14 +58,12 @@ Let's edit the ``index.html`` file next. We will add the HTML and JavaScript req
 
 ::
 
-<%inherit file="layout.html" />
-    
-    ## provide definitions for blocks we want to redefine
+    <%inherit file="layout.html" />
+
     <%def name="title()">
         Welcome to Pecan!
     </%def>
     
-    ## now define the body of the template
         <header>
             <h1><img src="/images/logo.png" /></h1>
         </header>
@@ -146,6 +144,6 @@ class Project(object):
     
 **What did we just do?**
 
-#. Created a model called **Project** that can holdproject specific data
+#. Created a model called **Project** that can hold project specific data
 #. Added a `__json__ <http://pecan.readthedocs.org/en/latest/jsonify.html>`_ method so an instance of the Project class can be easily represented as JSON. The controller we will soon build will make use of the JSON
 
