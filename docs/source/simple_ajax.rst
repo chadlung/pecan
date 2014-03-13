@@ -26,7 +26,7 @@ For this project will need to add `jQuery <http://jquery.com/>`_ support to this
 
 ::
 
-<html>
+    <html>
         <head>
             <title>${self.title()}</title>
             ${self.style()}
@@ -123,11 +123,11 @@ Let's edit the ``index.html`` file next. We will add the HTML and JavaScript req
 #. Added JavaScript to make an AJAX call to the server via an HTTP GET passing in the **id** of the project we want to fetch more information on
 #. Once **onSuccess** is called by the returning data we take that and display it in the **result** div.
 
-At this point the HTML and JavaScript is taken care of. At this point we can add a model to our project inside of the ``model``folder. Create a file there called ``projects.py`` and add the following to it:
+The HTML and JavaScript work is now taken care of. At this point we can add a model to our project inside of the `model` folder. Create a file in there called `projects.py` and add the following to it:
 
 ::
 
-class Project(object):
+    class Project(object):
         def __init__(self, name, licensing, repository, documentation):
             self.name = name
             self.licensing = licensing
