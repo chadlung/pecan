@@ -147,7 +147,7 @@ The HTML and JavaScript work is now taken care of. At this point we can add a mo
 #. Created a model called **Project** that can hold project specific data
 #. Added a `__json__ <http://pecan.readthedocs.org/en/latest/jsonify.html>`_ method so an instance of the Project class can be easily represented as JSON. The controller we will soon build will make use of the JSON
 
-**Note:** There are other ways to return JSON with Pecan, check out the ``documentation <http://pecan.readthedocs.org/en/latest/jsonify.html>``_ for another way.
+**Note:** There are other ways to return JSON with Pecan, check out the `documentation <http://pecan.readthedocs.org/en/latest/jsonify.html>`_ for another way.
 
 We don't need to really do anything major to the `root.py` file in the `controllers` folder except to add support for a new controller we will call `ProjectsController`. Modify the `root.py` like this:
 
@@ -213,7 +213,7 @@ The final piece is to add a file called `projects.py` to the `controllers` folde
 **What did we just do?**
 
 #. Created a local class variable called **projects** that holds three open source projects and their details. Typically this kind of information would probably reside in a database
-#. Added code for the new controller that will listen on **http://localhost:8080/projects/** (assuming project defaults) and serve back JSON based on the id passed in from the web page
+#. Added code for the new controller that will listen on **http://localhost:8080/projects/** (assuming project defaults) and serve back JSON based on the **id** passed in from the web page
 
 Run the application:
 
