@@ -210,7 +210,7 @@ The final piece is to add a file called ``projects.py`` to the ``controllers`` f
 **What did we just do?**
 
 #. Created a local class variable called ``projects`` that holds three open source projects and their details. Typically this kind of information would probably reside in a database
-#. Added code for the new controller that will listen on ``http://localhost:8080/projects/`` (assuming project defaults) and serve back JSON based on the ``id`` passed in from the web page
+#. Added code for the new controller that will listen on ``http://127.0.0.1:8080/projects/`` (assuming project defaults) and serve back JSON based on the ``id`` passed in from the web page
 
 Run the application:
 
