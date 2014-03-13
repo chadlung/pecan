@@ -120,10 +120,10 @@ Let's edit the ``index.html`` file next. We will add the HTML and JavaScript req
 **What did we just do?**
 
 #. Added a dropdown control and submit button for the user to interact with. They can pick an open source project and getmore details on it
-#. Added JavaScript to make an AJAX call to the server via an HTTP GET passing in the **id** of the project we want to fetch more information on
-#. Once **onSuccess** is called by the returning data we take that and display it in the **result** div.
+#. Added JavaScript to make an AJAX call to the server via an HTTP GET passing in the ``id`` of the project we want to fetch more information on
+#. Once the ``onSuccess`` event is triggered by the returning data we take that and display it on the web page below the controls.
 
-The HTML and JavaScript work is now taken care of. At this point we can add a model to our project inside of the `model` folder. Create a file in there called `projects.py` and add the following to it:
+The HTML and JavaScript work is now taken care of. At this point we can add a model to our project inside of the ``model`` folder. Create a file in there called ``projects.py`` and add the following to it:
 
 ::
 
@@ -169,9 +169,9 @@ We don't need to really do anything major to the `root.py` file in the `controll
 **What did we just do?**
 
 #. Removed some of the boilerplate code and the POST index code since we won't be using it
-#. Add support for the upcoming `ProjectsController`
+#. Add support for the upcoming ``ProjectsController``
 
-The final piece is to add a file called `projects.py` to the `controllers` folder. Add the following code to the new file:
+The final piece is to add a file called ``projects.py`` to the ``controllers`` folder. Add the following code to the new file:
 
 ::
 
@@ -212,8 +212,8 @@ The final piece is to add a file called `projects.py` to the `controllers` folde
             
 **What did we just do?**
 
-#. Created a local class variable called **projects** that holds three open source projects and their details. Typically this kind of information would probably reside in a database
-#. Added code for the new controller that will listen on **http://localhost:8080/projects/** (assuming project defaults) and serve back JSON based on the **id** passed in from the web page
+#. Created a local class variable called ``projects`` that holds three open source projects and their details. Typically this kind of information would probably reside in a database
+#. Added code for the new controller that will listen on ``http://localhost:8080/projects/`` (assuming project defaults) and serve back JSON based on the ``id`` passed in from the web page
 
 Run the application:
 
