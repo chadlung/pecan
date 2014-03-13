@@ -149,7 +149,7 @@ The HTML and JavaScript work is now taken care of. At this point we can add a mo
 
 **Note:** There are other ways to return JSON with Pecan, check out the `documentation <http://pecan.readthedocs.org/en/latest/jsonify.html>`_ for another way.
 
-We don't need to really do anything major to the `root.py` file in the `controllers` folder except to add support for a new controller we will call `ProjectsController`. Modify the `root.py` like this:
+We don't need to really do anything major to the ``root.py`` file in the ``controllers`` folder except to add support for a new controller we will call ``ProjectsController``. Modify the ``root.py`` like this:
 
 ::
 
