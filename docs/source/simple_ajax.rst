@@ -218,4 +218,4 @@ Run the application:
 
 $ pecan serve config.py
 
-Open a web browser: `http://127.0.0.1:8080/projects/ <http://127.0.0.1:8080/projects/>`_
+Open a web browser: `http://127.0.0.1:8080/ <http://127.0.0.1:8080/>`_
