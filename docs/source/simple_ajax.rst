@@ -147,3 +147,76 @@ The HTML and JavaScript work is now taken care of. At this point we can add a mo
 #. Created a model called **Project** that can hold project specific data
 #. Added a `__json__ <http://pecan.readthedocs.org/en/latest/jsonify.html>`_ method so an instance of the Project class can be easily represented as JSON. The controller we will soon build will make use of the JSON
 
+**Note:** There are other ways to return JSON with Pecan, check out the ``documentation <http://pecan.readthedocs.org/en/latest/jsonify.html>``_ for another way.
+
+We don't need to really do anything major to the `root.py` file in the `controllers` folder except to add support for a new controller we will call `ProjectsController`. Modify the `root.py` like this:
+
+::
+
+    from pecan import expose
+    
+    from myajax.controllers.projects import ProjectsController
+    
+    
+    class RootController(object):
+    
+        projects = ProjectsController()
+    
+        @expose(generic=True, template='index.html')
+        def index(self):
+            return dict()
+            
+**What did we just do?**
+
+#. Removed some of the boilerplate code and the POST index code since we won't be using it
+#. Add support for the upcoming `ProjectsController`
+
+The final piece is to add a file called `projects.py` to the `controllers` folder. Add the following code to the new file:
+
+::
+
+    from pecan import expose, response
+    from pecan.rest import RestController
+    
+    from myajax.model.projects import Project
+    
+    
+    class ProjectsController(RestController):
+    
+        # Note: You would probably store this information in a database
+        # This is just for simplicity and demonstration purposes
+        def __init__(self):
+            self.projects = [
+                Project(name='OpenStack',
+                        licensing='Apache 2',
+                        repository='http://github.com/openstack',
+                        documentation='http://docs.openstack.org'),
+                Project(name='Pecan',
+                        licensing='BSD',
+                        repository='http://github.com/stackforge/pecan',
+                        documentation='http://pecan.readthedocs.org'),
+                Project(name='stevedore',
+                        licensing='Apache 2',
+                        repository='http://github.com/dreamhost/pecan',
+                        documentation='http://stevedore.readthedocs.org')
+            ]
+    
+    
+        @expose('json', content_type='application/json')
+        def get(self, id):
+            # Note: You would want to verify the id doesn't
+            # go out of bounds, etc.
+            response.status = 200
+            #print(self.projects[int(id)])
+            return self.projects[int(id)]
+            
+**What did we just do?**
+
+#. Created a local class variable called **projects** that holds three open source projects and their details. Typically this kind of information would probably reside in a database
+#. Added code for the new controller that will listen on `http://localhost:8080/projects` (assuming defaults) and serve back JSON based on the id passed in from the web page
+
+Run the application:
+
+::
+
+$ pecan serve config.py
