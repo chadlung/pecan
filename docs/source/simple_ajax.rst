@@ -78,8 +78,7 @@ Let's edit the ``index.html`` file next. We will add the HTML and JavaScript req
             <button id="submit" type="submit">Submit</button>
     
             <script>
-                function onSuccess(data, status)
-                {
+                function onSuccess(data, status) {
                     // Messy, use a template or something here instead
                     // Just for demo purposes
                     $("#result").html("<div>" +
@@ -90,14 +89,12 @@ Let's edit the ``index.html`` file next. We will add the HTML and JavaScript req
                             "</div>");
                 }
     
-                function onError(data, status)
-                {
+                function onError(data, status) {
                     // Handle an error
                 }
     
                 $(document).ready(function() {
-                    $("#submit").click(function(){
-    
+                    $("#submit").click(function() {
                         $.ajax({
                             type: "GET",
                             url: "http://127.0.0.1:8080/projects/",
