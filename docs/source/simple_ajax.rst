@@ -141,10 +141,10 @@ The HTML and JavaScript work is now taken care of. At this point we can add a mo
     
 **What did we just do?**
 
-#. Created a model called **Project** that can hold project specific data
-#. Added a `__json__ <http://pecan.readthedocs.org/en/latest/jsonify.html>`_ method so an instance of the Project class can be easily represented as JSON. The controller we will soon build will make use of the JSON
+#. Created a model called ``Project`` that can hold project specific data
+#. Added a `__json__ <http://pecan.readthedocs.org/en/latest/jsonify.html>`_ method so an instance of the ``Project class`` can be easily represented as JSON. The controller we will soon build will make use of that JSON capability
 
-**Note:** There are other ways to return JSON with Pecan, check out the `documentation <http://pecan.readthedocs.org/en/latest/jsonify.html>`_ for another way.
+**Note:** There are other ways to return JSON with Pecan, check out the `documentation <http://pecan.readthedocs.org/en/latest/jsonify.html>`_ for more information.
 
 We don't need to really do anything major to the ``root.py`` file in the ``controllers`` folder except to add support for a new controller we will call ``ProjectsController``. Modify the ``root.py`` like this:
 
