@@ -165,9 +165,9 @@ The HTML and JavaScript work is now taken care of. At this point we can add a mo
 **What did we just do?**
 
 #. Created a model called ``Project`` that can hold project specific data
-#. Added a `__json__ <http://pecan.readthedocs.org/en/latest/jsonify.html>`_ method so an instance of the ``Project class`` can be easily represented as JSON. The controller we will soon build will make use of that JSON capability
+#. Added a :ref:`jsonify` method so an instance of the ``Project class`` can be easily represented as JSON. The controller we will soon build will make use of that JSON capability
 
-**Note:** There are other ways to return JSON with Pecan, check out the `documentation <http://pecan.readthedocs.org/en/latest/jsonify.html>`_ for more information.
+**Note:** There are other ways to return JSON with Pecan, check out :ref:`jsonify` for more information.
 
 Working with the Controllers
 ----------------------------
