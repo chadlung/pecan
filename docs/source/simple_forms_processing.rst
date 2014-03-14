@@ -29,7 +29,7 @@ $ python setup.py develop
 
 With the project ready, go into the ``templates`` folder and edit the ``index.html`` file. Modify it so that it resembles this:
 
-::
+.. code-block:: html
 
     <%inherit file="layout.html" />
 
@@ -141,7 +141,7 @@ Go back to the ``root.py`` files and modify it like this:
 
 Modify the ``index.html`` like this:
 
-::
+.. code-block:: html
 
     <%inherit file="layout.html" />
     
