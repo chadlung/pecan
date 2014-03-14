@@ -41,7 +41,7 @@ Adding jQuery support is easy, we actually only need one line of code:
 
 The ``layout.html`` file will look like this:
 
-::
+.. code-block:: html
 
     <html>
         <head>
@@ -76,7 +76,7 @@ Adding HTML and JavaScript
 
 Let's edit the ``index.html`` file next. We will add the HTML and JavaScript required to have a simple AJAX interaction between the web page and Pecan. Modify ``index.html`` to look like this:
 
-::
+.. code-block:: html
 
     <%inherit file="layout.html" />
 
