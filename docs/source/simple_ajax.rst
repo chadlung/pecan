@@ -1,7 +1,7 @@
 Simple AJAX
 ===========
 
-This guide will walk you through building a simple Pecan web application that uses AJAX to fetch information from the server.
+This guide will walk you through building a simple Pecan web application that uses AJAX to fetch JSON information from a server.
 
 First off, you'll need to install Pecan:
 
