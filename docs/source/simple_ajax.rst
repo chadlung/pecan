@@ -5,6 +5,9 @@ Simple AJAX
 
 This guide will walk you through building a simple Pecan web application that uses AJAX to fetch JSON information from a server.
 
+Project Setup
+-------------
+
 First off, you'll need to install Pecan:
 
 ::
@@ -23,6 +26,9 @@ Put the new project into development mode:
 ::
 
 $ python setup.py develop
+
+Adding jQuery Support
+---------------------
 
 For this project we will need to add `jQuery <http://jquery.com/>`_ support. To add jQuery go into the templates folder and edit the ``layout.html`` file.
 
@@ -64,6 +70,9 @@ The ``layout.html`` file will look like this:
 **What did we just do?**
 
 #. In the ``head`` section we added jQuery support via the `Google CDN <https://developers.google.com/speed/libraries/devguide>`_.
+
+Adding AJAX and JavaScript
+--------------------------
 
 Let's edit the ``index.html`` file next. We will add the HTML and JavaScript required to have a simple AJAX interaction between the web page and Pecan. Modify ``index.html`` to look like this:
 
@@ -131,6 +140,9 @@ Let's edit the ``index.html`` file next. We will add the HTML and JavaScript req
 #. Added JavaScript to make an AJAX call to the server via an HTTP ``GET`` passing in the ``id`` of the project to fetch more information on
 #. Once the ``onSuccess`` event is triggered by the returning data we take that and display it on the web page below the controls
 
+Building the Model with JSON Support
+------------------------------------
+
 The HTML and JavaScript work is now taken care of. At this point we can add a model to our project inside of the ``model`` folder. Create a file in there called ``projects.py`` and add the following to it:
 
 ::
@@ -156,6 +168,9 @@ The HTML and JavaScript work is now taken care of. At this point we can add a mo
 #. Added a `__json__ <http://pecan.readthedocs.org/en/latest/jsonify.html>`_ method so an instance of the ``Project class`` can be easily represented as JSON. The controller we will soon build will make use of that JSON capability
 
 **Note:** There are other ways to return JSON with Pecan, check out the `documentation <http://pecan.readthedocs.org/en/latest/jsonify.html>`_ for more information.
+
+Working with the Controllers
+----------------------------
 
 We don't need to really do anything major to the ``root.py`` file in the ``controllers`` folder except to add support for a new controller we will call ``ProjectsController``. Modify the ``root.py`` like this:
 
