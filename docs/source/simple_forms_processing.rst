@@ -22,7 +22,7 @@ Put the new project into development mode:
 
 $ python setup.py develop
 
-With the project ready, go into the templates folder and edit the ``index.html`` file. Modify it so that it resembles this:
+With the project ready, go into the ``templates`` folder and edit the ``index.html`` file. Modify it so that it resembles this:
 
 ::
 
