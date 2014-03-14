@@ -88,7 +88,7 @@ Let's edit the ``index.html`` file next. We will add the HTML and JavaScript req
 
         <script>
             function onSuccess(data, status) {
-                // Messy, use a template or something here instead
+                // Use a template or something here instead
                 // Just for demo purposes
                 $("#result").html("<div>" +
                         "<p></p><strong>Project Name: " + data.name + "</strong></p>" +
