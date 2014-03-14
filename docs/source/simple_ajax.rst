@@ -1,3 +1,5 @@
+.. _simple_ajax
+
 Simple AJAX
 ===========
 
@@ -126,7 +128,7 @@ Let's edit the ``index.html`` file next. We will add the HTML and JavaScript req
 **What did we just do?**
 
 #. Added a dropdown control and submit button for the user to interact with. They can pick an open source project and get more details on it
-#. Added JavaScript to make an AJAX call to the server via an HTTP GET passing in the ``id`` of the project to fetch more information on
+#. Added JavaScript to make an AJAX call to the server via an HTTP ``GET`` passing in the ``id`` of the project to fetch more information on
 #. Once the ``onSuccess`` event is triggered by the returning data we take that and display it on the web page below the controls
 
 The HTML and JavaScript work is now taken care of. At this point we can add a model to our project inside of the ``model`` folder. Create a file in there called ``projects.py`` and add the following to it:
@@ -177,7 +179,7 @@ We don't need to really do anything major to the ``root.py`` file in the ``contr
 #. Removed some of the initial boilerplate code since we won't be using it
 #. Add support for the upcoming ``ProjectsController``
 
-The final piece is to add a file called ``projects.py`` to the ``controllers`` folder. This new file will host the ``ProjectsController`` which will listen for incoming AJAX (HTTP GET) calls (in our case) and return the appropriate JSON response.
+The final piece is to add a file called ``projects.py`` to the ``controllers`` folder. This new file will host the ``ProjectsController`` which will listen for incoming AJAX HTTP ``GET`` calls (in our case) and return the appropriate JSON response.
 
 Add the following code to the ``projects.py`` file:
 
