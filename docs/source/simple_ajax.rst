@@ -73,55 +73,55 @@ Let's edit the ``index.html`` file next. We will add the HTML and JavaScript req
         Welcome to Pecan!
     </%def>
     
-        <header>
-            <h1><img src="/images/logo.png" /></h1>
-        </header>
-    
-        <div id="content">
-            <p>Select a project to get details:</p>
-            <select id="projects">
-                <option value="0">OpenStack</option>
-                <option value="1">Pecan</option>
-                <option value="2">Steve Dore</option>
-            </select>
-            <button id="submit" type="submit">Submit</button>
-    
-            <script>
-                function onSuccess(data, status) {
-                    // Messy, use a template or something here instead
-                    // Just for demo purposes
-                    $("#result").html("<div>" +
-                            "<p></p><strong>Project Name: " + data.name + "</strong></p>" +
-                            "<p>Project License: " + data.licensing + "</p>" +
-                            "<p><a href='" + data.repository + "'>Project Repository: " + data.repository + "</a></p>" +
-                            "<p><a href='" + data.documentation + "'>Project Documentation: " + data.documentation + "</a></p>" +
-                            "</div>");
-                }
-    
-                function onError(data, status) {
-                    // Handle an error
-                }
-    
-                $(document).ready(function() {
-                    $("#submit").click(function() {
-                        $.ajax({
-                            type: "GET",
-                            url: "http://127.0.0.1:8080/projects/",
-                            data: "id=" + $("#projects").val(),
-                            contentType: 'application/json',
-                            dataType: 'json',
-                            success: onSuccess,
-                            error: onError
-                        });
-    
-                        return false;
-                    });
-                });
-            </script>
-    
-            <div id="result"></div>
-    
-        </div>
+	<header>
+		<h1><img src="/images/logo.png" /></h1>
+	</header>
+
+	<div id="content">
+		<p>Select a project to get details:</p>
+		<select id="projects">
+			<option value="0">OpenStack</option>
+			<option value="1">Pecan</option>
+			<option value="2">Steve Dore</option>
+		</select>
+		<button id="submit" type="submit">Submit</button>
+
+		<script>
+			function onSuccess(data, status) {
+				// Messy, use a template or something here instead
+				// Just for demo purposes
+				$("#result").html("<div>" +
+						"<p></p><strong>Project Name: " + data.name + "</strong></p>" +
+						"<p>Project License: " + data.licensing + "</p>" +
+						"<p><a href='" + data.repository + "'>Project Repository: " + data.repository + "</a></p>" +
+						"<p><a href='" + data.documentation + "'>Project Documentation: " + data.documentation + "</a></p>" +
+						"</div>");
+			}
+
+			function onError(data, status) {
+				// Handle an error
+			}
+
+			$(document).ready(function() {
+				$("#submit").click(function() {
+					$.ajax({
+						type: "GET",
+						url: "http://127.0.0.1:8080/projects/",
+						data: "id=" + $("#projects").val(),
+						contentType: 'application/json',
+						dataType: 'json',
+						success: onSuccess,
+						error: onError
+					});
+
+					return false;
+				});
+			});
+		</script>
+
+		<div id="result"></div>
+
+	</div>
 
 **What did we just do?**
 
