@@ -71,7 +71,7 @@ The ``layout.html`` file will look like this:
 
 #. In the ``head`` section we added jQuery support via the `Google CDN <https://developers.google.com/speed/libraries/devguide>`_.
 
-Adding AJAX and JavaScript
+Adding HTML and JavaScript
 --------------------------
 
 Let's edit the ``index.html`` file next. We will add the HTML and JavaScript required to have a simple AJAX interaction between the web page and Pecan. Modify ``index.html`` to look like this:
