@@ -34,7 +34,7 @@ For this project we will need to add `jQuery <http://jquery.com/>`_ support. To 
 
 Adding jQuery support is easy, we actually only need one line of code:
 
-::
+.. code-block:: html
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 
@@ -145,7 +145,7 @@ Building the Model with JSON Support
 
 The HTML and JavaScript work is now taken care of. At this point we can add a model to our project inside of the ``model`` folder. Create a file in there called ``projects.py`` and add the following to it:
 
-::
+.. code-block:: python
 
     class Project(object):
         def __init__(self, name, licensing, repository, documentation):
@@ -174,7 +174,7 @@ Working with the Controllers
 
 We don't need to really do anything major to the ``root.py`` file in the ``controllers`` folder except to add support for a new controller we will call ``ProjectsController``. Modify the ``root.py`` like this:
 
-::
+.. code-block:: python
 
     from pecan import expose
     
@@ -198,7 +198,7 @@ The final piece is to add a file called ``projects.py`` to the ``controllers`` f
 
 Add the following code to the ``projects.py`` file:
 
-::
+.. code-block:: python
 
     from pecan import expose, response
     from pecan.rest import RestController
