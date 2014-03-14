@@ -70,58 +70,58 @@ Let's edit the ``index.html`` file next. We will add the HTML and JavaScript req
     <%inherit file="layout.html" />
 
     <%def name="title()">
-        Welcome to Pecan!
+    Welcome to Pecan!
     </%def>
-    
-	<header>
-		<h1><img src="/images/logo.png" /></h1>
-	</header>
 
-	<div id="content">
-		<p>Select a project to get details:</p>
-		<select id="projects">
-			<option value="0">OpenStack</option>
-			<option value="1">Pecan</option>
-			<option value="2">Steve Dore</option>
-		</select>
-		<button id="submit" type="submit">Submit</button>
+    <header>
+        <h1><img src="/images/logo.png"/></h1>
+    </header>
 
-		<script>
-			function onSuccess(data, status) {
-				// Messy, use a template or something here instead
-				// Just for demo purposes
-				$("#result").html("<div>" +
-						"<p></p><strong>Project Name: " + data.name + "</strong></p>" +
-						"<p>Project License: " + data.licensing + "</p>" +
-						"<p><a href='" + data.repository + "'>Project Repository: " + data.repository + "</a></p>" +
-						"<p><a href='" + data.documentation + "'>Project Documentation: " + data.documentation + "</a></p>" +
-						"</div>");
-			}
+    <div id="content">
+        <p>Select a project to get details:</p>
+        <select id="projects">
+            <option value="0">OpenStack</option>
+            <option value="1">Pecan</option>
+            <option value="2">Steve Dore</option>
+        </select>
+        <button id="submit" type="submit">Submit</button>
 
-			function onError(data, status) {
-				// Handle an error
-			}
+        <script>
+            function onSuccess(data, status) {
+                // Messy, use a template or something here instead
+                // Just for demo purposes
+                $("#result").html("<div>" +
+                        "<p></p><strong>Project Name: " + data.name + "</strong></p>" +
+                        "<p>Project License: " + data.licensing + "</p>" +
+                        "<p><a href='" + data.repository + "'>Project Repository: " + data.repository + "</a></p>" +
+                        "<p><a href='" + data.documentation + "'>Project Documentation: " + data.documentation + "</a></p>" +
+                        "</div>");
+            }
 
-			$(document).ready(function() {
-				$("#submit").click(function() {
-					$.ajax({
-						type: "GET",
-						url: "http://127.0.0.1:8080/projects/",
-						data: "id=" + $("#projects").val(),
-						contentType: 'application/json',
-						dataType: 'json',
-						success: onSuccess,
-						error: onError
-					});
+            function onError(data, status) {
+                // Handle an error
+            }
 
-					return false;
-				});
-			});
-		</script>
+            $(document).ready(function () {
+                $("#submit").click(function () {
+                    $.ajax({
+                        type: "GET",
+                        url: "http://127.0.0.1:8080/projects/",
+                        data: "id=" + $("#projects").val(),
+                        contentType: 'application/json',
+                        dataType: 'json',
+                        success: onSuccess,
+                        error: onError
+                    });
 
-		<div id="result"></div>
+                    return false;
+                });
+            });
+        </script>
 
-	</div>
+        <div id="result"></div>
+
+    </div>
 
 **What did we just do?**
 
