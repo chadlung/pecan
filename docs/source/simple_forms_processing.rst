@@ -62,7 +62,7 @@ Go into the ``controllers`` folder now and edit the ``root.py`` file. There will
 
 Modify the ``root.py`` to look like this:
 
-::
+.. code-block:: python
 
     from pecan import expose
     
@@ -97,7 +97,7 @@ One problem you might have noticed is if you don't enter a message or a first na
 
 Add support for the `WTForms <http://wtforms.simplecodes.com/>`_ library:
 
-::
+.. code-block:: python
 
 $ pip install wtforms
 
@@ -105,7 +105,7 @@ $ pip install wtforms
 
 Go back to the ``root.py`` files and modify it like this:
 
-::
+.. code-block:: python
 
     from pecan import expose, request
     from wtforms import Form, TextField, validators
