@@ -179,7 +179,7 @@ We don't need to really do anything major to the ``root.py`` file in the ``contr
 #. Removed some of the initial boilerplate code since we won't be using it
 #. Add support for the upcoming ``ProjectsController``
 
-The final piece is to add a file called ``projects.py`` to the ``controllers`` folder. This new file will host the ``ProjectsController`` which will listen for incoming AJAX HTTP ``GET`` calls (in our case) and return the appropriate JSON response.
+The final piece is to add a file called ``projects.py`` to the ``controllers`` folder. This new file will host the ``ProjectsController`` which will listen for incoming AJAX ``GET`` calls (in our case) and return the appropriate JSON response.
 
 Add the following code to the ``projects.py`` file:
 
