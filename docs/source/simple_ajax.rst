@@ -27,6 +27,7 @@ For this project we will need to add `jQuery <http://jquery.com/>`_ support. To 
 Adding jQuery support is easy, we actually only need one line of code:
 
 ::
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 
 
