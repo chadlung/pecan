@@ -5,6 +5,9 @@ Simple Forms Processing with Pecan
 
 This guide will walk you through building a simple Pecan web application that will do some simple forms processing.
 
+Project Setup
+-------------
+
 First off, you'll need to install Pecan:
 
 ::
@@ -84,6 +87,9 @@ Run the application:
 ::
 
 $ pecan serve config.py
+
+Adding Validation
+-----------------
 
 Enter a message into the textbox along with a name in the second textbox and press the submit button. You should see a personalized message displayed below the form once the page posts back.
 
