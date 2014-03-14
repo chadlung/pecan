@@ -97,7 +97,7 @@ One problem you might have noticed is if you don't enter a message or a first na
 
 Add support for the `WTForms <http://wtforms.simplecodes.com/>`_ library:
 
-.. code-block:: python
+::
 
 $ pip install wtforms
 
