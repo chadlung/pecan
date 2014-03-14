@@ -93,7 +93,7 @@ Adding Validation
 
 Enter a message into the textbox along with a name in the second textbox and press the submit button. You should see a personalized message displayed below the form once the page posts back.
 
-One problem you might have noticed is if you don't enter a message or a first name then you simply see no value entered for that part of the message. Let's add a little validation to make sure a message and a first name was actually entered. However, let's go about this using `WTForms <http://wtforms.simplecodes.com/>`_ as mentioned in the `Cookbook and Common Patterns <http://pecan.readthedocs.org/en/latest/index.html#cookbook-and-common-patterns>`_ section `Generating and Validating Forms <http://pecan.readthedocs.org/en/latest/forms.html>`_.
+One problem you might have noticed is if you don't enter a message or a first name then you simply see no value entered for that part of the message. Let's add a little validation to make sure a message and a first name was actually entered. For this, we will use `WTForms <http://wtforms.simplecodes.com/>`_ but you can substitute anything else for your projects.
 
 Add support for the `WTForms <http://wtforms.simplecodes.com/>`_ library:
 
