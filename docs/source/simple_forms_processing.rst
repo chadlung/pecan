@@ -1,3 +1,5 @@
+.. _simple_forms_processing:
+
 Simple Forms Processing with Pecan
 ==================================
 
